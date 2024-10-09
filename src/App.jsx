@@ -4,6 +4,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Sidebar from "@components/layout/Sidebar";
 import User from "./pages/User";
+import Address from "./pages/Address.jsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/user" element={<Sidebar />}>
           <Route path="profile" element={<User />} />
+          <Route path="addresses" element={<Address />} />
         </Route>
       </Routes>
     </>
