@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import axiosInstance from "../../../lib/axios.js";
 
-export const useGetAddress = (page, search) => {
+export const useGetAddress = ({ page, search, size }) => {
   const params = new URLSearchParams();
 
   if (page) {
@@ -10,6 +10,10 @@ export const useGetAddress = (page, search) => {
 
   if (search) {
     params.append("search", search);
+  }
+
+  if (size) {
+    params.append("size", size);
   }
 
   return useQuery({

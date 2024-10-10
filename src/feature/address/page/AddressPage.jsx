@@ -11,7 +11,7 @@ const AddressPage = () => {
   const page = new URLSearchParams(location.search).get("page");
   const search = new URLSearchParams(location.search).get("search");
 
-  const { data, isPending, isError, error } = useGetAddress(page, search);
+  const { data, isPending, isError, error } = useGetAddress({ page, search });
 
   const addresses = data?.data;
   const paging = data?.paging;

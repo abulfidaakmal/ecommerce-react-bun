@@ -1,3 +1,4 @@
+import { EllipsisVertical } from "lucide-react";
 import AddressAction from "./AddressAction.jsx";
 import { useState } from "react";
 
@@ -8,12 +9,15 @@ const AddressList = ({ addresses, isPending }) => {
     return (
       <div className="divide-y divide-primary">
         {[1, 2, 3].map((result) => (
-          <div className="flex flex-col p-3 my-2" key={result}>
-            <div className="flex flex-col mb-2">
+          <div className="flex items-center justify-between p-2" key={result}>
+            <div className="grid w-full py-2">
               <div className="h-6 mb-1 skeleton" />
-              <div className="h-6 skeleton" />
+              <div className="w-full h-5 mb-1 skeleton" />
+              <div className="h-5 mt-2 skeleton" />
             </div>
-            <div className="h-6 skeleton" />
+            <div tabIndex={0} role="button" className="ml-4 btn">
+              <EllipsisVertical size={18} />
+            </div>
           </div>
         ))}
       </div>
