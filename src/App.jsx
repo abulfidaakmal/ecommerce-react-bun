@@ -6,6 +6,7 @@ import Sidebar from "@components/layout/Sidebar";
 import User from "./pages/User";
 import Address from "./pages/Address.jsx";
 import Seller from "./pages/Seller.jsx";
+import Product from "./pages/Product.jsx";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           <Route path="profile" element={<User />} />
           <Route path="addresses" element={<Address />} />
           <Route path="seller" element={<Seller />} />
+        </Route>
+        <Route path="/seller" element={<Sidebar />}>
+          <Route path="products" element={<Product />} />
         </Route>
       </Routes>
     </>
