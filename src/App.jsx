@@ -7,6 +7,7 @@ import User from "./pages/User";
 import Address from "./pages/Address.jsx";
 import Seller from "./pages/Seller.jsx";
 import Product from "./pages/Product.jsx";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Home />} />
         <Route path="/user" element={<Sidebar />}>
           <Route path="profile" element={<User />} />
           <Route path="addresses" element={<Address />} />
