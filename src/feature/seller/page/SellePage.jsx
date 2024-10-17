@@ -4,11 +4,11 @@ import SellerForm from "../component/SellerForm.jsx";
 import { useSession } from "../../../hooks/useSession.js";
 
 const SellerPage = () => {
-  const { data: address, isError, error } = useGetAddress();
+  const { data: address, isError, error } = useGetAddress({ page: 1 });
   const redirect = useNavigate();
   const { role } = useSession();
 
-  if (role === "SELLER") redirect("/user/products");
+  if (role === "SELLER") redirect("/seller/products");
 
   return (
     <div className="p-6">
