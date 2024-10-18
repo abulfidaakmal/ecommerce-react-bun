@@ -9,6 +9,7 @@ import Seller from "./pages/Seller.jsx";
 import Product from "./pages/Product.jsx";
 import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
+import Wishlist from "./pages/Wishlist.jsx";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="profile" element={<User />} />
           <Route path="addresses" element={<Address />} />
           <Route path="seller" element={<Seller />} />
+          <Route path="wishlists" element={<Wishlist />} />
         </Route>
         <Route path="/seller" element={<Sidebar />}>
           <Route path="products" element={<Product />} />
