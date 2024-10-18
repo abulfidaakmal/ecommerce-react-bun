@@ -48,23 +48,23 @@ const RatingDistribution = ({ productId }) => {
             readOnly
           />
           <div className="ml-2">
-            <span className="ml-1 text-3xl lg:text-6xl">{data.average}</span>
+            <span className="ml-1 text-3xl lg:text-6xl">{data?.average}</span>
             <span className="text-xl">/5.0</span>
           </div>
         </div>
         <div>
           <span className="mt-4 mb-1 font-bold md:mt-0 md:mb-0">
-            {data.percentage} buyers are satisfied
+            {data?.percentage} buyers are satisfied
           </span>
           <div className="flex text-sm font-medium lg:justify-center">
-            <span>{data.total_rating} ratings</span>
+            <span>{data?.total_rating} ratings</span>
             <span className="mx-2">-</span>
-            <span>{data.total_review} reviews</span>
+            <span>{data?.total_review} reviews</span>
           </div>
         </div>
       </div>
       <div className="hidden mt-6 lg:block">
-        {data.ratings.map((rating) => (
+        {data?.ratings.map((rating) => (
           <div key={rating} className="flex items-center">
             <span className="mr-1">{rating.rating}</span>
             <div className="rating">

@@ -5,7 +5,7 @@ import ButtonWishlist from "./ButtonWishlist.jsx";
 
 const ProductInfo = ({ product }) => {
   return (
-    <div className="grid gap-3 divide-y divide-primary md:w-96">
+    <div className="grid gap-3 divide-y divide-primary md:w-96 h-max">
       <div className="flex justify-between">
         <div className="grid">
           <span className="text-xl font-semibold">{product?.name}</span>
