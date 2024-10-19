@@ -10,6 +10,7 @@ import Product from "./pages/Product.jsx";
 import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
 import Wishlist from "./pages/Wishlist.jsx";
+import Cart from "./pages/Cart.jsx";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Home />} />
         <Route path="/product/:productId" element={<ProductDetail />} />
+        <Route path="/carts" element={<Cart />} />
         <Route path="/user" element={<Sidebar />}>
           <Route path="profile" element={<User />} />
           <Route path="addresses" element={<Address />} />
