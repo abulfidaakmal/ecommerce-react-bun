@@ -44,7 +44,7 @@ const ProductReview = () => {
               ))}
             </div>
           ) : (
-            <div>
+            <div className="w-full">
               {data?.pages.map((page, index) => (
                 <ReviewList reviews={page.data} key={index} />
               ))}
