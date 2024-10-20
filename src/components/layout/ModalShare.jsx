@@ -96,13 +96,13 @@ const ModalShare = ({ merchantName }) => {
           <h2 id="modal-title" className="text-lg font-bold">
             Share This Shop
           </h2>
-          <div className="flex mt-4 justify-evenly">
+          <div className="flex mt-3 md:mt-4 justify-evenly">
             {shares.map((share, index) => (
               <div className="flex flex-col items-center gap-2" key={index}>
                 <button className="p-4 w-max h-max btn" onClick={share.fun}>
                   {share.icons}
                 </button>
-                <span>{share.title}</span>
+                <span className="text-sm md:text-base">{share.title}</span>
               </div>
             ))}
           </div>

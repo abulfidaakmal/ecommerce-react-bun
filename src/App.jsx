@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
 import Wishlist from "./pages/Wishlist.jsx";
 import Cart from "./pages/Cart.jsx";
+import Merchant from "./pages/Merchant.jsx";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/product/:productId" element={<ProductDetail />} />
         <Route path="/carts" element={<Cart />} />
+        <Route path="/merchant/:merchantName" element={<Merchant />} />
         <Route path="/user" element={<Sidebar />}>
           <Route path="profile" element={<User />} />
           <Route path="addresses" element={<Address />} />
