@@ -13,6 +13,7 @@ import Wishlist from "./pages/Wishlist.jsx";
 import Cart from "./pages/Cart.jsx";
 import Merchant from "./pages/Merchant.jsx";
 import Review from "./pages/Review.jsx";
+import Order from "./pages/Order.jsx";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="seller" element={<Seller />} />
           <Route path="wishlists" element={<Wishlist />} />
           <Route path="reviews" element={<Review />} />
+          <Route path="orders" element={<Order />} />
         </Route>
         <Route path="/seller" element={<Sidebar />}>
           <Route path="products" element={<Product />} />
