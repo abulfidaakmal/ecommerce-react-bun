@@ -3,7 +3,7 @@ import ReadMore from "@components/element/ReadMore.jsx";
 const OrderAddress = ({ address }) => {
   const data = [
     {
-      title: "Nama Penerima",
+      title: "Recipient",
       value: address.name,
     },
     {

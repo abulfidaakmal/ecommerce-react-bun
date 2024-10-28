@@ -1,19 +1,21 @@
 import { currencyFormat } from "../../../utils/currencyFormat";
 import ModalImage from "@components/layout/ModalImage";
-import BadgeStatus from "@components/element/BadgeStatus";
+import BadgeStatus from "./BadgeStatus";
 import { Link } from "react-router-dom";
 
 const ProductOrder = ({ data }) => {
-  const { id, name, image_url } = data.orderDetails.product;
+  const { id, name, image_url } = data.product;
   const { quantity, price, status } = data.order;
 
   return (
     <div className="flex gap-2">
       <ModalImage image={image_url} />
       <div>
-        <Link to={`/product/${id}`} className="grid">
+        <div className="grid">
           <BadgeStatus status={status} />
-          <span className="font-bold">{name}</span>
+          <Link to={`/product/${id}`} className="font-bold">
+            {name}
+          </Link>
           <span>
             Quantity: <span>{quantity}</span>
           </span>
@@ -21,7 +23,7 @@ const ProductOrder = ({ data }) => {
             <span className="font-bold">{currencyFormat(price)}</span>
             /product
           </span>
-        </Link>
+        </div>
       </div>
     </div>
   );
