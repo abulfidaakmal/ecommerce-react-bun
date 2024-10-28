@@ -15,6 +15,8 @@ import Merchant from "./pages/Merchant.jsx";
 import Review from "./pages/Review.jsx";
 import Order from "./pages/Order.jsx";
 import OrderDetail from "./pages/OrderDetail.jsx";
+import OrderSeller from "./pages/OrderSeller.jsx";
+import OrderDetailSeller from "./pages/OrderDetailSeller.jsx";
 
 function App() {
   return (
@@ -41,6 +43,11 @@ function App() {
         </Route>
         <Route path="/seller" element={<Sidebar />}>
           <Route path="products" element={<Product />} />
+          <Route path="orders" element={<OrderSeller />} />
+          <Route
+            path="orders/:orderId/products/:productId"
+            element={<OrderDetailSeller />}
+          />
         </Route>
       </Routes>
     </>
