@@ -35,3 +35,15 @@ export const updateAvatarSchema = Yup.object().shape({
       return true;
     }),
 });
+
+export const updateSellerSchema = Yup.object().shape({
+  name: Yup.string()
+    .min(3, "Name must be at least 3 character long")
+    .max(100, "Name must be at most 100 characters long")
+    .trim()
+    .optional(),
+  description: Yup.string()
+    .min(10, "Description must be at least 10 character long")
+    .trim()
+    .optional(),
+});
