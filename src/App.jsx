@@ -18,6 +18,7 @@ import OrderDetail from "./pages/OrderDetail.jsx";
 import OrderSeller from "./pages/OrderSeller.jsx";
 import OrderDetailSeller from "./pages/OrderDetailSeller.jsx";
 import ProductCategories from "./pages/ProductCategories.jsx";
+import Chat from "./pages/Chat.jsx";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           path="/products/categories/:categoryName"
           element={<ProductCategories />}
         />
+        <Route path="/chat" element={<Chat />} />
         <Route path="/user" element={<Sidebar />}>
           <Route path="profile" element={<User />} />
           <Route path="addresses" element={<Address />} />
